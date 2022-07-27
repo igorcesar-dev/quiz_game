@@ -7,20 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/scripts.js" defer></script>
 </head>
 
 <body>
     <div class="container">
         <h1 class="title-quizz">Quizz de JavaScript</h1>
-        <div class="box-questions">
-            <div class="box-alternatives">
-                <p class="question">1 - O PHP foi desenvolvido para qual fim?</p>
-                <p class="alternative">A - Back-end</p>
-                <p class="alternative">B - Front-end</p>
-                <p class="alternative">C - Sistema operacional</p>
-                <p class="alternative">D - Banco de dados</p>
+
+        <!-- SCORE BOARD -->
+        <div id="score-container">
+            <h2>Parabéns!</h2>
+            <p id="display-score"><span>90</span>%</p>
+            <p>Você acertou <span id="correct-answers">0</span> de <span id="questions-qty">10</span> perguntas</p>
+            <button id="restart">Refazer o Quizz</button>
+        </div>
+
+        <!-- QUIZZ CONTAINER -->
+        <div id="quizz-questions">
+            <p id="question"><span id="question-number">1</span> - <span id="question-text"> PHP foi desenvolvido para
+                    qual fim?</span></p>
+            <div id="answers-box">
+                <button class="correct-answer"><span class="btn-letter">a</span> <span class="question-answer">res1</span></button>
+                <button class="wrong-answer"><span class="btn-letter">b</span> <span class="question-answer">res2</span></button>
+                <button><span class="btn-letter">c</span> <span class="question-answer">res3</span></button>
+                <button><span class="btn-letter">d</span> <span class="question-answer">res4</span></button>
             </div>
         </div>
+
+        <!-- TEMPLATE ANSWER -->
+        <button class="answer-template hide"><span class="btn-letter">a</span> <span
+                class="question-answer">res0</span></button>
     </div>
 </body>
 
