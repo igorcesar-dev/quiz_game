@@ -118,11 +118,6 @@ body {
     transition: .5s;
 }
 
-#answers-box button:hover {
-    background-color: #e78230;
-    color: #fff;
-}
-
 #answers-box .btn-letter {
     font-size: 30px;
     font-weight: bold;
