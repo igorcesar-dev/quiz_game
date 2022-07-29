@@ -1,7 +1,7 @@
 /* Variables */
 const question = document.getElementById('question');
 const answersBox = document.getElementById('answers-box');
-const quizzQuestions = document.getElementById('quizz-questions');
+const quizQuestions = document.getElementById('quiz-questions');
 const scoreContainer = document.getElementById('score-container');
 const letters = ["a", "b", "c", "d"];
 let points = 0;
@@ -152,7 +152,7 @@ function createQuestion(i) {
         answersBox.appendChild(answerTemplate);
 
         /* insert click event on the button */
-        answerTemplate.addEventListener("click", function() {
+        answerTemplate.addEventListener("click", function () {
             checkAnswer(this);
         });
     });
@@ -166,13 +166,13 @@ function checkAnswer(btn) {
 
     /* select all buttons */
     const buttons = answersBox.querySelectorAll("button");
-    
+
     /* verify if question is correct */
-    buttons.forEach(function(button) {
-        if(button.getAttribute("correct-answer") === "true") {
+    buttons.forEach(function (button) {
+        if (button.getAttribute("correct-answer") === "true") {
             button.classList.add("correct-answer");
 
-            if(btn === button) {
+            if (btn === button) {
                 points++;
             }
 
@@ -185,15 +185,15 @@ function checkAnswer(btn) {
     nextQuestion();
 }
 
-// Display the next question on quizz
+// Display the next question on quiz
 function nextQuestion() {
 
-    // Timer para ver respostas
-    setTimeout(function() {
+    // Timer to see responses
+    setTimeout(function () {
 
-        // verifica se ainda há perguntas
-        if(actualQuestion >= questions.length) {
-            // apresenta a mensagem de sucesso
+        // check if there are still questions
+        if (actualQuestion >= questions.length) {
+            // displays the success message
             showSuccessMessage();
             return;
         }
@@ -205,41 +205,40 @@ function nextQuestion() {
 
 // Display final game
 function showSuccessMessage() {
-    
-    hideOrShowQuizz();
 
-    // trocar dados da tela de sucesso
+    hideOrShowQuiz();
 
-    // calcular o score
+    // exchange success screen data
+    // calculate the score
     const score = ((points / questions.length) * 100).toFixed(2);
 
-    const displayScore= document.querySelector("#display-score span");
+    const displayScore = document.querySelector("#display-score span");
 
     displayScore.textContent = score.toString();
 
-    // Alterar o número de perguntas corretas
+    // Change the number of correct questions
     const correctAnswers = document.querySelector("#correct-answers");
     correctAnswers.textContent = points;
 
-    // alterar o total de perguntas
+    // change the total of questions
     const totalQuestions = document.querySelector("#questions-qty");
     totalQuestions.textContent = questions.length;
 }
 
-// Mostra ou esconde e score
-function hideOrShowQuizz() {
-    quizzQuestions.classList.toggle("hide");
+// Show or hide and score
+function hideOrShowQuiz() {
+    quizQuestions.classList.toggle("hide");
     scoreContainer.classList.toggle("hide");
 }
 
-// Reiniciar quizz
+// reset quiz
 const restartBtn = document.querySelector("#restart");
 
-restartBtn.addEventListener("click", function() {
-    // zerar o jogo
+restartBtn.addEventListener("click", function () {
+    // reset the game
     actualQuestion = 0;
     points = 0;
-    hideOrShowQuizz();
+    hideOrShowQuiz();
     init();
 });
 
