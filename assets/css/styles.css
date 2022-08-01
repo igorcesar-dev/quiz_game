@@ -22,7 +22,6 @@ body {
     margin: 10px auto;
     text-align: center;
     padding: 20px;
-    border: 1px solid #ffe600;
 }
 
 /* SCORE CONTAINER */
@@ -36,7 +35,6 @@ body {
     margin: 50px auto;
     padding: 25px;
     border-radius: 20px;
-    border: 1px solid #ffe600;
 }
 
 #score-container p {
@@ -85,7 +83,6 @@ body {
 #quiz-questions {
     width: 500px;
     margin: 50px auto;
-    border: 1px solid #ffe600;
     padding: 25px;
     border-radius: 15px;
     background-color: #3b3b3b;
@@ -152,6 +149,30 @@ body {
 #quiz-questions .correct-answer .btn-letter {
     background-color: #40b576;
     color: #fff;
+}
+
+/* Footer */
+
+.footer {
+    font-size: 1.4rem;
+    position: absolute;
+    bottom: 0;
+    color: #FFF;
+    width: 100%;
+    text-align: center;
+    line-height: 5px;
+}
+
+.heart {
+    color: #ff0000;
+}
+
+.footer p {
+    margin: 0;
+    height: 5px;
+    padding: 2rem;
+    text-align: center;
+    background-color: #3b3b3b;
 }
 
 /* RESPONSIVE */

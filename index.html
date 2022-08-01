@@ -12,31 +12,36 @@
 </head>
 
 <body>
-        <h1 class="title-quiz">Quiz de JavaScript</h1>
+    <h1 class="title-quiz">Quiz de JavaScript</h1>
 
-        <!-- SCORE BOARD -->
-        <div id="score-container" class="hide">
-            <h2>Parabéns!</h2>
-            <p id="display-score"><span>90</span>%</p>
-            <p>Você acertou <span id="correct-answers">0</span> de <span id="questions-qty">10</span> perguntas</p>
-            <button id="restart">Refazer o Quiz</button>
+    <!-- SCORE BOARD -->
+    <div id="score-container" class="hide">
+        <h2>Parabéns!</h2>
+        <p id="display-score"><span>90</span>%</p>
+        <p>Você acertou <span id="correct-answers">0</span> de <span id="questions-qty">10</span> perguntas</p>
+        <button id="restart">Refazer o Quiz</button>
+    </div>
+
+    <!-- QUIZ CONTAINER -->
+    <div id="quiz-questions">
+        <p id="question"><span id="question-number">1</span> - <span id="question-text"> PHP foi desenvolvido para
+                qual fim?</span></p>
+        <div id="answers-box">
+            <button><span class="btn-letter">a</span> <span class="question-answer">res1</span></button>
+            <button><span class="btn-letter">b</span> <span class="question-answer">res2</span></button>
+            <button><span class="btn-letter">c</span> <span class="question-answer">res3</span></button>
+            <button><span class="btn-letter">d</span> <span class="question-answer">res4</span></button>
         </div>
+    </div>
 
-        <!-- QUIZ CONTAINER -->
-        <div id="quiz-questions">
-            <p id="question"><span id="question-number">1</span> - <span id="question-text"> PHP foi desenvolvido para
-                    qual fim?</span></p>
-            <div id="answers-box">
-                <button><span class="btn-letter">a</span> <span class="question-answer">res1</span></button>
-                <button><span class="btn-letter">b</span> <span class="question-answer">res2</span></button>
-                <button><span class="btn-letter">c</span> <span class="question-answer">res3</span></button>
-                <button><span class="btn-letter">d</span> <span class="question-answer">res4</span></button>
-            </div>
-        </div>
+    <!-- TEMPLATE ANSWER -->
+    <button class="answer-template hide"><span class="btn-letter">a</span> <span
+            class="question-answer">res0</span></button>
 
-        <!-- TEMPLATE ANSWER -->
-        <button class="answer-template hide"><span class="btn-letter">a</span> <span
-                class="question-answer">res0</span></button>
+    <!-- FOOTER -->
+    <footer id="footer" class="footer white-bg">
+        <p>Feito com <span class="heart">❤</span> por Igor César</p>
+    </footer>
 </body>
 
 </html>
